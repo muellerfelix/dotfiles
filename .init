@@ -33,17 +33,13 @@ cmds=(
   git
   git-lfs
   ghi
-  vim
-  selecta
-  find_with_gitignore
-  tidy-html5
   m-cli
   screen
   nvm
-  yarn
-  npm-scripts
   rmapp
   youtube-dl
+  python
+  pandoc
 )
 
 # dep for ghi
@@ -124,6 +120,26 @@ mkdir ~/.nvm
 nvm install 6
 nvm use 6
 nvm alias default 6
+
+# ==============================================
+# Python stuff
+# ==============================================
+
+# easy install
+curl https://bootstrap.pypa.io/ez_setup.py -o - | sudo python
+
+# install pip
+sudo easy_install pip
+
+# install jupyter notebook
+pip install jupyter
+
+
+# install python packages
+pip install scipy
+pip install numpy
+pip install matplotlib
+
 
 # ==============================================
 # Xcode
