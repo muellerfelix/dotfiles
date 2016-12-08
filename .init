@@ -33,14 +33,21 @@ cmds=(
   git
   git-lfs
   ghi
+  vim
+  selecta
+  find_with_gitignore
+  tidy-html5
   m-cli
   screen
   nvm
+  yarn
+  npm-scripts
   rmapp
   youtube-dl
   python
   pandoc
 )
+
 
 # dep for ghi
 gem install pygments.rb
@@ -53,13 +60,13 @@ brew cask install otto
 # github
 # ==============================================
 
-git config --global user.name "Frederik Dudzik"
+git config --global user.name "Felix Mueller"
 git config --global user.email "$EMAIL"
 git config --global push.default simple
 git config --global core.editor vim
 git config --global credential.helper osxkeychain
 git config --global core.excludesfile ~/.gitignore_osx
-ssh-keygen -t rsa -b 4096 -C "frederik@dudzik.co"
+ssh-keygen -t rsa -b 4096 -C "felixx.mueller@gmail.com"
 eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa
 pbcopy < ~/.ssh/id_rsa.pub
 
@@ -74,11 +81,11 @@ sleep 2
 open https://github.com/settings/ssh
 read -p ''
 echo "ghi"
-ghi config --auth doodzik
+ghi config --auth muellerfelix
 
 # setup repo for dotfiles
 git init
-git remote add origin https://github.com/doodzik/dotfiles.git
+git remote add origin https://github.com/muellerfelix/dotfiles.git
 git fetch
 git checkout -t origin/master
 git submodule update --init --recursive --remote
@@ -194,15 +201,12 @@ osascript -e 'tell application "Safari" to activate
 
                 open location "http://www.remotemouse.net"
                 open location "http://www.onenote.com"
-                open location "http://www.wacom.com/en-us/support/product-support/drivers"
                 open location "http://magnet.crowdcafe.com/#download"
               end tell'
 
 
 echo "set ublock eu cookie warning"
 echo "import waste no time config"
-echo "wacom desktop login and reset settings"
-echo "disable wacom desktop autostart. In the menu bar settings."
 echo "onenote login"
 echo "press [enter] to continue"
 read -p ''
@@ -239,17 +243,17 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -int 
 defaults write -g com.apple.trackpad.scaling 3
 
 # keyboard
-defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '{ InputSourceKind = "Keyboard Layout"; "KeyboardLayout ID" = 0; "KeyboardLayout Name" = "U.S"; }'
+defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '{ InputSourceKind = "Keyboard Layout"; "KeyboardLayout ID" = 2; "KeyboardLayout Name" = "German"; }'
 defaults write InitialKeyRepeat -int 15
 defaults write KeyRepeat -int 2
 
 # capslock to cntr
 # ~/Library/Preferences/ByHost/.GlobalPreferences
-mappingplist=com.apple.keyboard.modifiermapping.1452-585-0
-defaults -currentHost write -g $mappingplist '({
-    HIDKeyboardModifierMappingDst = 2;
-    HIDKeyboardModifierMappingSrc = 0;
-  })'
+#mappingplist=com.apple.keyboard.modifiermapping.1452-585-0
+#defaults -currentHost write -g $mappingplist '({
+#    HIDKeyboardModifierMappingDst = 2;
+#    HIDKeyboardModifierMappingSrc = 0;
+#  })'
 
 # notification settings
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
