@@ -3,7 +3,7 @@
 set -x
 
 sudo -s
-echo "what did you do?"
+
 if [ $? -ne 0 ]; then
     echo "please run the script again with a correct password"
     exit 1
