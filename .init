@@ -20,7 +20,7 @@ EMAIL="$1"
 # homebrew
 # ==============================================
 
-command -v brew >/dev/null 2>&1 || ruby -e "$(curl | iconv -f windows-1251 | -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+command -v brew >/dev/null 2>&1 || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew tap doodzik/tap https://github.com/doodzik/tap
 # for screen
