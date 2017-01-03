@@ -29,19 +29,10 @@ brew tap caskroom/cask
 
 cmds=(
   zsh
-  bash_join
   git
-  git-lfs
-  ghi
   vim
-  selecta
-  find_with_gitignore
-  tidy-html5
   m-cli
   screen
-  nvm
-  yarn
-  npm-scripts
   rmapp
   youtube-dl
   python
@@ -50,7 +41,6 @@ cmds=(
 
 
 # dep for ghi
-gem install pygments.rb
 
 brew install ${cmds[@]}
 
