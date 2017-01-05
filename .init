@@ -76,12 +76,6 @@ git fetch
 git checkout -t origin/master
 git submodule update --init --recursive --remote
 
-cd .zprezto
-git submodule update --init --recursive --remote
-
-cd
-
-
 # ==============================================
 # zsh
 # ==============================================
