@@ -30,6 +30,7 @@ brew tap caskroom/cask
 cmds=(
   zsh
   git
+  ghi
   vim
   m-cli
   screen
@@ -39,12 +40,7 @@ cmds=(
   pandoc
 )
 
-
-# dep for ghi
-
 brew install ${cmds[@]}
-
-brew cask install otto
 
 # ==============================================
 # github
@@ -131,11 +127,11 @@ sudo easy_install pip
 # install jupyter notebook
 pip install jupyter
 
-
-# install python packages
+# install python packages 
 pip install scipy
 pip install numpy
 pip install matplotlib
+pip install -U scikit-learn
 
 
 # ==============================================
@@ -158,9 +154,9 @@ echo "installing gui..."
 guis=(
   vlc
   flux
-  anki
   iterm2
   macid
+  caffeine
 )
 
 brew cask install ${guis[@]}
@@ -170,7 +166,6 @@ echo 'Press [Enter] if done'
 sleep 2
 open -a System\ Preferences
 open -a Flux
-open -a Anki
 open -a macid
 read -p ''
 
@@ -185,19 +180,14 @@ osascript -e 'tell application "Safari" to activate
                 open location "https://github.com/guyht/vimari/releases/latest"
                 open location "http://www.bumblebeesystems.com/wastenotime/"
 
-                open location "https://ankiweb.net/shared/info/3448800906"
-                open location "https://ankiweb.net/shared/info/1600138415"
-                open location "https://ankiweb.net/shared/info/315734179"
-
                 open location "http://www.remotemouse.net"
-                open location "http://www.onenote.com"
                 open location "http://magnet.crowdcafe.com/#download"
+                open location "http://repeatify.info"
               end tell'
 
 
 echo "set ublock eu cookie warning"
 echo "import waste no time config"
-echo "onenote login"
 echo "press [enter] to continue"
 read -p ''
 
