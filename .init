@@ -4,10 +4,10 @@ set -x
 
 sudo -s
 
-if [ $? -ne 0 ]; then
-    echo "please run the script again with a correct password"
-    exit 1
-fi
+#if [ $? -ne 0 ]; then
+#    echo "please run the script again with a correct password"
+#    exit 1
+#fi
 
 #if [ -z "$1" ]; then
 #    echo "please provide an email address as an argument"
