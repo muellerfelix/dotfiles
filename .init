@@ -9,12 +9,12 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-if [ -z "$1" ]; then
-    echo "please provide an email address as an argument"
-    exit 1
-fi
+#if [ -z "$1" ]; then
+#    echo "please provide an email address as an argument"
+#    exit 1
+#fi
 
-EMAIL="$1"
+#EMAIL="$1"
 
 # ==============================================
 # homebrew
@@ -47,7 +47,7 @@ brew install ${cmds[@]}
 # ==============================================
 
 git config --global user.name "Felix Mueller"
-git config --global user.email "$EMAIL"
+git config --global user.email "felixx.mueller@gmail.com"
 git config --global push.default simple
 git config --global core.editor vim
 git config --global credential.helper osxkeychain
